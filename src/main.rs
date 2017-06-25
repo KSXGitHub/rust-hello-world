@@ -1,6 +1,6 @@
 extern crate hello_world;
 pub use hello_world::lib::HelloWorld;
-pub use self::factorial as fac;
+use self::factorial as fac;
 
 pub fn factorial(n: u8) -> u64 {
     let nn = n as u64;
