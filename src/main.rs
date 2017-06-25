@@ -10,9 +10,18 @@ impl HelloWorld {
     }
 }
 
+fn callfunc<F, X, R>(f: F, x: X) -> R
+where F: Fn(X) -> R {
+    f(x)
+}
+
 fn main() {
     fn localmain() -> HelloWorld {
         HelloWorld {}
     }
     localmain().print();
+
+    let x = 12;
+    let r = callfunc(|p| p * x, 5);
+    println!("{:?}", r);
 }
