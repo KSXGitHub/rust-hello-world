@@ -9,6 +9,5 @@ impl HelloWorld {
 }
 
 fn main() {
-    let hw = HelloWorld {};
-    hw.print();
+    (HelloWorld {}).print();
 }
