@@ -9,5 +9,8 @@ impl HelloWorld {
 }
 
 fn main() {
-    (HelloWorld {}).print();
+    fn localmain() -> HelloWorld {
+        HelloWorld {}
+    }
+    localmain().print();
 }
