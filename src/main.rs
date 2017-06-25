@@ -8,11 +8,12 @@ impl HelloWorld {
     fn print(&self) {
         println!("{}", self.to_string());
     }
+
+    fn create_printer() -> Box<Fn()> {
+        Box::new(|| (HelloWorld {}).print())
+    }
 }
 
 fn main() {
-    fn localmain() -> HelloWorld {
-        HelloWorld {}
-    }
-    localmain().print();
+    HelloWorld::create_printer()();
 }
