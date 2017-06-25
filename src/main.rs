@@ -1,8 +1,10 @@
 struct HelloWorld;
 
-impl HelloWorld {
-    fn to_string (&self) -> &str { "Hello, World!!" }
+impl ToString for HelloWorld {
+    fn to_string(&self) -> String { "Hello, World!!".to_string() }
+}
 
+impl HelloWorld {
     fn print(&self) {
         println!("{}", self.to_string());
     }
