@@ -1,6 +1,9 @@
 extern crate hello_world;
-use hello_world::lib::HelloWorld;
+pub use hello_world::swap::swap;
 
-fn main() {
-    HelloWorld::create_printer()();
+pub fn main() {
+    let (mut a, mut b) = ("hello", "world");
+    println!("Before swap(a, b): {:?}", [a, b]);
+    swap(&mut a, &mut b);
+    println!("After swap(a, b): {:?}", [a, b]);
 }
