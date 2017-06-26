@@ -1,5 +1,5 @@
-extern crate hello_world;
-use hello_world::HelloWorld;
+mod functions;
+pub use functions::*;
 
 fn main() {
     HelloWorld::create_printer()();
