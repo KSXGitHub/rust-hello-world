@@ -1,6 +1,7 @@
-extern crate hello_world;
-use hello_world::factorial::fac;
-use hello_world::fibonacci::fib;
+mod factorial;
+mod fibonacci;
+pub use factorial::*;
+pub use fibonacci::*;
 
 pub fn main () {
     let (begin, end) = (0, 16);
