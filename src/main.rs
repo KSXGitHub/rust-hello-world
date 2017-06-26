@@ -5,6 +5,12 @@ use hello_world::fibonacci::fib;
 pub fn main () {
     let (begin, end) = (0 as u8, 16 as u8);
 
+    let vecres = (begin..end).collect::<Vec<_>>();
+    println!("Vector: {:?}", vecres);
+
+    let sqrres = (begin..end).map(|x| x * x).collect::<Vec<_>>();
+    println!("Square: {:?}", sqrres);
+
     let facres = (begin..end).map(fac).collect::<Vec<u64>>();
     println!("Factorial: {:?}", facres);
 
