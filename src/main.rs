@@ -1,10 +1,14 @@
-mod factorial;
-mod fibonacci;
+pub mod input;
+pub mod factorial;
+pub mod fibonacci;
+pub mod types;
+
+pub use input::tuple::*;
 pub use factorial::*;
 pub use fibonacci::*;
 
 pub fn main () {
-    let (begin, end) = (0, 16);
+    let (begin, end) = input("From", "To");
 
     let vecres = (begin..end).collect::<Vec<_>>();
     println!("Vector: {:?}", vecres);
