@@ -2,6 +2,9 @@ use super::input::tuple::*;
 use super::factorial::*;
 use super::fibonacci::*;
 
+/// # main
+/// The main function
+/// Will be called by `main` in `main.rs`
 pub fn main () {
     println!("Enter the range of input:");
     let (begin, end) = input("* From", "* To");
