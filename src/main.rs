@@ -8,7 +8,8 @@ pub use factorial::*;
 pub use fibonacci::*;
 
 pub fn main () {
-    let (begin, end) = input("From", "To");
+    println!("Enter the range of input:");
+    let (begin, end) = input("* From", "* To");
 
     let vecres = (begin..end).collect::<Vec<_>>();
     println!("Vector: {:?}", vecres);
