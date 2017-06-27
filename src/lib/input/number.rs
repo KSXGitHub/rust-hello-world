@@ -1,4 +1,4 @@
-use types::Number;
+use lib::types::Number;
 use std::io::*;
 
 pub fn input(question: &str) -> Number {

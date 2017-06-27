@@ -1,11 +1,6 @@
-pub mod input;
-pub mod factorial;
-pub mod fibonacci;
-pub mod types;
-
-pub use input::tuple::*;
-pub use factorial::*;
-pub use fibonacci::*;
+use super::input::tuple::*;
+use super::factorial::*;
+use super::fibonacci::*;
 
 pub fn main () {
     println!("Enter the range of input:");
