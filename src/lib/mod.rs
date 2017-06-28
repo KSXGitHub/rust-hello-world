@@ -1,5 +1,3 @@
-//! # Lib
-
 /// Input numbers
 pub mod input;
 
